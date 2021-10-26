@@ -35,6 +35,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="100dp"
         android:text="Button"
+        android:onClick="next"
         app:layout_constraintEnd_toEndOf="@+id/next_content"
         app:layout_constraintStart_toStartOf="@+id/next_content"
         app:layout_constraintTop_toBottomOf="@+id/next_content" />
