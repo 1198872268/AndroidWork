@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 public class WordList {
     //获取生词列表
+
     ArrayList<HashMap<String,String>> retlist;
     SQLiteDatabase db;
     MyDBHelper myDBHelper;
