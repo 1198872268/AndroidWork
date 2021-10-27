@@ -1,17 +1,15 @@
 package com.swufe.mywork;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.DialogInterface;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,7 +29,7 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemLongC
 
         listView = findViewById(R.id.word_list);
         ArrayList<HashMap<String,String>> list2 = (ArrayList<HashMap<String,String>>) new WordList().obtainword(MyWord.this);
-        Log.i("list", "handleMessage: "+list2);
+        Log.i("list", "wordlist: "+list2);
         myadapter = new MyAdapter(MyWord.this,R.layout.list_item,list2);
 
         listView.setAdapter(myadapter);

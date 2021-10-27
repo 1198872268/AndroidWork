@@ -46,11 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate: position:"+i);
         HashMap<String, String> word = wordlist.get(i);
         String myword = word.get("word");
-
-
         show_word.setText(myword);
-
-
     }
     public void know(View v){
         btu_know = findViewById(R.id.btn_konw);
@@ -68,7 +64,26 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("position",i);
         startActivity(intent);
         finish();
-
+    }
+    public void to_page_rember(View v){
+        //转到记单词界面
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void to_page_wordlist(View v){
+        //转到展示全部单词界面
+        Intent intent = new Intent(this,MyWord.class);
+        startActivity(intent);
+    }
+    public void to_page_search(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,SearchOnline.class);
+        startActivity(intent);
+    }
+    public void to_page_add(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,AddWord.class);
+        startActivity(intent);
     }
 
 
