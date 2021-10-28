@@ -3,7 +3,6 @@ package com.swufe.mywork;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,7 +27,7 @@ public class WordList {
             map.put("word",word);
             map.put("content",content);
             retlist.add(map);
-            Log.i(TAG, "myword: "+word+":"+content);
+//            Log.i(TAG, "myword: "+word+":"+content);
 
         }
         return retlist;

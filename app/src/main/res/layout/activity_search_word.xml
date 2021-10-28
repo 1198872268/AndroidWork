@@ -22,34 +22,48 @@
         android:id="@+id/btn_search"
         android:layout_width="59dp"
         android:layout_height="43dp"
-        android:text="Button"
         android:onClick="search"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/search_input_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/search_input_word"
         app:layout_constraintTop_toTopOf="@+id/search_input_word" />
 
     <TextView
-        android:id="@+id/search_show_word"
-        android:layout_width="159dp"
-        android:layout_height="50dp"
-        android:text="TextView"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
-
-    <TextView
         android:id="@+id/search_show_content"
         android:layout_width="341dp"
         android:layout_height="58dp"
-        android:layout_marginTop="84dp"
-        android:text="TextView"
+        android:layout_marginTop="160dp"
         android:gravity="center"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_show_word" />
+        app:layout_constraintTop_toBottomOf="@+id/search_input_word" />
+
+    <Button
+        android:id="@+id/local_to_add"
+        android:layout_width="119dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="20dp"
+        android:text="自己添加"
+        android:visibility="gone"
+        android:onClick="page_to_addword"
+        app:layout_constraintEnd_toStartOf="@+id/local_to_searchonline"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_show_content" />
+
+    <Button
+        android:id="@+id/local_to_searchonline"
+        android:layout_width="114dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="56dp"
+        android:text="在线搜索"
+        android:visibility="gone"
+        android:onClick="page_to_searchonline"
+        app:layout_constraintBottom_toBottomOf="@+id/local_to_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/local_to_add"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

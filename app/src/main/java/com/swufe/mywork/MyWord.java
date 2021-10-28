@@ -49,6 +49,8 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemLongC
                 db = myDBHelper.getWritableDatabase();
 
                 Log.i(TAG, "onClick: 对话事件处理");
+                Log.i(TAG, "onClick: 长按position："+position);
+                retlist = (ArrayList<HashMap<String,String>>) new WordList().obtainword(MyWord.this);
                 retlist.remove(position);
                 Object itemAtPosition = listView.getItemAtPosition(position);
                 HashMap<String,String> map = (HashMap<String,String>)itemAtPosition;
@@ -63,7 +65,7 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemLongC
             }
         }).setNegativeButton("否",null);
         bulider.create().show();
-        Log.i(TAG, "onItemLongClick: size="+retlist.size());
+//        Log.i(TAG, "onItemLongClick: size="+retlist.size());
         return true;
     }
 }

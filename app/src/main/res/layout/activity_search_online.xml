@@ -33,12 +33,13 @@
         android:id="@+id/online_content"
         android:layout_width="218dp"
         android:layout_height="97dp"
-        android:layout_marginTop="264dp"
-        android:text="TextView"
+        android:layout_marginTop="144dp"
         android:gravity="center"
+        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/search_online" />
 
     <Button
         android:id="@+id/online_add_word"

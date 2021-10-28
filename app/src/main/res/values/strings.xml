@@ -2,4 +2,6 @@
     <string name="app_name">MyWork</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searchonline">在线搜索</string>
+    <string name="add">添加至单词表</string>
 </resources>

@@ -45,6 +45,7 @@ public class SearchOnline extends AppCompatActivity implements Runnable{
         td.start();
     }
 
+
     //将获取到的单词加入生词本
     public void online_add_word(View v){
         search_online = findViewById(R.id.search_online);

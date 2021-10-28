@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         show_word = findViewById(R.id.word);
         btu_know = findViewById(R.id.btn_konw);
         btu_tips = findViewById(R.id.btn_tips);
+        refresh();
         sp = getSharedPreferences("myrate", Activity.MODE_PRIVATE);
         i = sp.getInt("position",0);
         if(i>=wordlist.size()){
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         String myword = word.get("word");
         show_word.setText(myword);
     }
+
     public void know(View v){
         btu_know = findViewById(R.id.btn_konw);
         show_word = findViewById(R.id.word);
@@ -65,6 +68,27 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
+    //每日更新单词位置
+    public void refresh(){
+        sp = getSharedPreferences("myrate", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        //将当前时间放进sharedperferences
+        String old_time = sp.getString("time","0000-00-00");
+        Log.i(TAG, "run: old_time:"+old_time);
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+        String now_time = format.format(System.currentTimeMillis());
+        Log.i(TAG, "run: now_time: "+now_time);
+        editor.putString("time",now_time);
+        //如果当前时间与sharedperfences中时间不一样说明未更新过，需要更新
+        if(!old_time.equals(now_time)){
+            editor.putInt("position",1);
+            editor.commit();
+            Log.i(TAG, "refresh: "+now_time+"--"+old_time);
+        }
+        }
+
     public void to_page_rember(View v){
         //转到记单词界面
         Intent intent = new Intent(this,MainActivity.class);
@@ -77,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void to_page_search(View v){
         //转到搜索单词界面
-        Intent intent = new Intent(this,SearchOnline.class);
+        Intent intent = new Intent(this,SearchWord.class);
         startActivity(intent);
     }
     public void to_page_add(View v){
