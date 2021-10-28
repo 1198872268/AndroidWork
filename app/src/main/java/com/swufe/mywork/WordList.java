@@ -3,15 +3,12 @@ package com.swufe.mywork;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Handler;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class WordList {
     //获取生词列表
-
-    Handler handler = new Handler();
 
     ArrayList<HashMap<String,String>> retlist;
     SQLiteDatabase db;

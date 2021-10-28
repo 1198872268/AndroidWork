@@ -13,6 +13,8 @@
         android:layout_height="90dp"
         android:gravity="center"
         android:text="TextView"
+        style="@style/word"
+        android:background="@drawable/text_radioborder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -24,7 +26,7 @@
         android:id="@+id/btn_konw"
         android:layout_width="300dp"
         android:layout_height="65dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="112dp"
         android:onClick="know"
         android:text="@string/know"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +44,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_konw" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
 
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
@@ -58,6 +67,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            style="@style/lead"
             android:onClick="to_page_rember"
             android:text="@string/remeber" />
 
@@ -67,6 +77,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            style="@style/lead"
             android:onClick="to_page_wordlist"
             android:text="@string/myword" />
 
@@ -90,13 +101,7 @@
             android:text="@string/addword" />
     </RadioGroup>
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

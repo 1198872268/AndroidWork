@@ -17,7 +17,7 @@ import java.util.HashMap;
 
 public class MyWord extends AppCompatActivity implements AdapterView.OnItemClickListener,AdapterView.OnItemLongClickListener{
     MyAdapter myadapter;
-    ListView listView;
+    public static ListView listView;
     public static ArrayList<HashMap<String,String>> retlist;
     SQLiteDatabase db;
     MyDBHelper myDBHelper;
@@ -36,6 +36,7 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemClick
 
         listView.setAdapter(myadapter);
         listView.setOnItemLongClickListener(MyWord.this);
+        listView.setOnItemClickListener(MyWord.this);
     }
 
 
@@ -80,12 +81,15 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemClick
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+//        listView = findViewById(R.id.word_list);
         Object itemAtPosition = listView.getItemAtPosition(position);
         HashMap<String,String> map = (HashMap<String,String>)itemAtPosition;
         String word = map.get("word");
         String content = map.get("content");
         Log.i(TAG, "onItemClick:title "+word);
         Log.i(TAG, "onItemClick: detail"+content);
+
+
 //发送消息
         Intent intent = new Intent(this, WordDetail.class);
         intent.putExtra("detail_word",word);

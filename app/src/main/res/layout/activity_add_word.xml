@@ -8,13 +8,12 @@
 
     <EditText
         android:id="@+id/add_word"
-        android:layout_width="145dp"
-        android:layout_height="65dp"
         android:text="@string/word"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        style="@style/input_word"
         android:gravity="center"
         app:layout_constraintVertical_bias="0.285" />
 
@@ -24,6 +23,7 @@
         android:layout_height="62dp"
         android:gravity="center"
         android:text="@string/content"
+        style="@style/input_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

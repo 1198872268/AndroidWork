@@ -8,8 +8,7 @@
 
     <TextView
         android:id="@+id/detail_word"
-        android:layout_width="143dp"
-        android:layout_height="45dp"
+        style="@style/word"
         android:layout_marginTop="220dp"
         android:gravity="center"
         android:text="TextView"
@@ -19,8 +18,8 @@
 
     <TextView
         android:id="@+id/detail_content"
-        android:layout_width="329dp"
-        android:layout_height="151dp"
+        style="@style/content"
+        android:background="@drawable/text_radioborder"
         android:layout_marginTop="76dp"
         android:gravity="center"
         android:text="TextView"

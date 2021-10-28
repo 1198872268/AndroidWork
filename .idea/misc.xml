@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/project/MyWork/app/src/main/res/drawable/text_radioborder.xml" value="0.22719298245614036" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_add_word.xml" value="0.264" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_main2.xml" value="0.2390625" />
@@ -10,14 +11,15 @@
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_new_word.xml" value="0.2390625" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_search_online.xml" value="0.264" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_search_word.xml" value="0.264" />
-        <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_show_word.xml" value="0.25364583333333335" />
+        <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_show_word.xml" value="0.264" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_sqlite_insert.xml" value="0.25364583333333335" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/activity_word_detail.xml" value="0.264" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/fragment_.xml" value="0.21359649122807017" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/fragment__list.xml" value="0.264" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/fragment_myword.xml" value="0.10921052631578948" />
-        <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/list_item.xml" value="0.4" />
+        <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/list_item.xml" value="0.264" />
         <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/menu.xml" value="0.21359649122807017" />
+        <entry key="..\:/Android/project/MyWork/app/src/main/res/layout/style.xml" value="0.21359649122807017" />
       </map>
     </option>
   </component>

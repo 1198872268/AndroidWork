@@ -8,9 +8,12 @@
     <TextView
         android:id="@+id/item_word"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
         android:layout_marginTop="4dp"
         android:text="TextView"
+        android:layout_margin="10dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
