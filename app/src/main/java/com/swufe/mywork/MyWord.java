@@ -1,6 +1,7 @@
 package com.swufe.mywork;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,10 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MyWord extends AppCompatActivity implements AdapterView.OnItemLongClickListener{
+public class MyWord extends AppCompatActivity implements AdapterView.OnItemClickListener,AdapterView.OnItemLongClickListener{
     MyAdapter myadapter;
     ListView listView;
-    ArrayList<HashMap<String,String>> retlist;
+    public static ArrayList<HashMap<String,String>> retlist;
     SQLiteDatabase db;
     MyDBHelper myDBHelper;
     String TAG = "myword";
@@ -27,10 +28,11 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemLongC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_word);
 
+
         listView = findViewById(R.id.word_list);
-        ArrayList<HashMap<String,String>> list2 = (ArrayList<HashMap<String,String>>) new WordList().obtainword(MyWord.this);
-        Log.i("list", "wordlist: "+list2);
-        myadapter = new MyAdapter(MyWord.this,R.layout.list_item,list2);
+        retlist = (ArrayList<HashMap<String,String>>) new WordList().obtainword(MyWord.this);
+        Log.i("list", "wordlist: "+retlist);
+        myadapter = new MyAdapter(MyWord.this,R.layout.list_item,retlist);
 
         listView.setAdapter(myadapter);
         listView.setOnItemLongClickListener(MyWord.this);
@@ -50,22 +52,44 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemLongC
 
                 Log.i(TAG, "onClick: 对话事件处理");
                 Log.i(TAG, "onClick: 长按position："+position);
-                retlist = (ArrayList<HashMap<String,String>>) new WordList().obtainword(MyWord.this);
-                retlist.remove(position);
-                Object itemAtPosition = listView.getItemAtPosition(position);
-                HashMap<String,String> map = (HashMap<String,String>)itemAtPosition;
+//                retlist = (ArrayList<HashMap<String,String>>) new WordList().obtainword(MyWord.this);
+                Log.i(TAG, "onClick: retlist"+retlist);
+
+
+
+
+//                Object itemAtPosition = listView.getItemAtPosition(position);
+                HashMap<String,String> map = retlist.get(position-1);
                 String word = map.get("word");
                 String content = map.get("content");
                 db.delete("word", "word = ?", new String[]{word});
                 Log.i(TAG, "onItemClick:title "+word);
-                Log.i(TAG, "onItemClick: detail"+content);
+//                Log.i(TAG, "onItemClick: detail"+content);
 
+                retlist.remove(position);
                 myadapter.notifyDataSetChanged();
 
+//                Log.i(TAG, "onItemLongClick: size="+retlist.size());
             }
+
         }).setNegativeButton("否",null);
         bulider.create().show();
-//        Log.i(TAG, "onItemLongClick: size="+retlist.size());
+//
         return true;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        Object itemAtPosition = listView.getItemAtPosition(position);
+        HashMap<String,String> map = (HashMap<String,String>)itemAtPosition;
+        String word = map.get("word");
+        String content = map.get("content");
+        Log.i(TAG, "onItemClick:title "+word);
+        Log.i(TAG, "onItemClick: detail"+content);
+//发送消息
+        Intent intent = new Intent(this, WordDetail.class);
+        intent.putExtra("detail_word",word);
+        intent.putExtra("detail_content",content);
+        startActivity(intent);
     }
 }

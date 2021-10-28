@@ -4,4 +4,18 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="searchonline">在线搜索</string>
     <string name="add">添加至单词表</string>
+    <string name="next">下一个</string>
+    <string name="know">我认识</string>
+    <string name="not_know">不认识</string>
+    <string name="search">搜索</string>
+    <string name="remeber">记单词</string>
+    <string name="myword">我的单词本</string>
+    <string name="search_word">搜索单词</string>
+    <string name="addword">添加单词</string>
+    <string name="search_content">请输入您要搜索的单词</string>
+    <string name="blank"> </string>
+    <string name="word">请输入单词</string>
+    <string name="content">请输入单词含义</string>
+
+
 </resources>

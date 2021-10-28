@@ -14,12 +14,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/item_content"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="4dp"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@+id/item_word"
-        tools:layout_editor_absoluteX="0dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/item_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="TextView"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/item_word"-->
+<!--        tools:layout_editor_absoluteX="0dp" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

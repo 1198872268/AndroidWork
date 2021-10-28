@@ -30,10 +30,10 @@ public class MyAdapter extends ArrayAdapter {
         }
         Map<String,String> map=  (Map<String,String>)getItem(position);
         TextView title = (TextView) itemView.findViewById(R.id.item_word);
-        TextView detail = (TextView) itemView.findViewById(R.id.item_content);
+//        TextView detail = (TextView) itemView.findViewById(R.id.item_content);
 
         title.setText(map.get("word"));
-        detail.setText(map.get("content"));
+//        detail.setText(map.get("content"));
 
         return  itemView;
 //        return super.getView(position, convertView, parent);

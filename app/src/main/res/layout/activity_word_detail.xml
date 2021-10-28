@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".show_word">
+    tools:context=".WordDetail">
 
     <TextView
-        android:id="@+id/next_word"
+        android:id="@+id/detail_word"
         android:layout_width="143dp"
         android:layout_height="45dp"
         android:layout_marginTop="220dp"
@@ -18,25 +18,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/next_content"
-        android:layout_width="322dp"
-        android:layout_height="40dp"
-        android:gravity="center"
+        android:id="@+id/detail_content"
+        android:layout_width="329dp"
+        android:layout_height="151dp"
         android:layout_marginTop="76dp"
+        android:gravity="center"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/next_word"
+        app:layout_constraintEnd_toEndOf="@+id/detail_word"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="@+id/next_word"
-        app:layout_constraintTop_toBottomOf="@+id/next_word" />
+        app:layout_constraintStart_toStartOf="@+id/detail_word"
+        app:layout_constraintTop_toBottomOf="@+id/detail_word" />
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/next"
-        android:onClick="next"
-        app:layout_constraintEnd_toEndOf="@+id/next_content"
-        app:layout_constraintStart_toStartOf="@+id/next_content"
-        app:layout_constraintTop_toBottomOf="@+id/next_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

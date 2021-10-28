@@ -26,7 +26,7 @@
         android:layout_height="65dp"
         android:layout_marginTop="160dp"
         android:onClick="know"
-        android:text="Button"
+        android:text="@string/know"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
         android:onClick="know"
-        android:text="Button"
+        android:text="@string/not_know"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_konw" />
@@ -59,7 +59,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:onClick="to_page_rember"
-            android:text="记单词" />
+            android:text="@string/remeber" />
 
         <TextView
             android:id="@+id/page_wordlist"
@@ -68,7 +68,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:onClick="to_page_wordlist"
-            android:text="我的单词本" />
+            android:text="@string/myword" />
 
         <TextView
             android:id="@+id/page_search"
@@ -78,7 +78,7 @@
             android:gravity="center"
             android:onClick="to_page_search"
 
-            android:text="搜索单词" />
+            android:text="@string/search_word" />
 
         <TextView
             android:id="@+id/page_add"
@@ -87,7 +87,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:onClick="to_page_add"
-            android:text="添加单词" />
+            android:text="@string/addword" />
     </RadioGroup>
 
     <View
