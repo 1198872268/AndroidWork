@@ -9,7 +9,7 @@
         android:id="@+id/item_word"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:gravity="center_vertical"
         android:layout_marginTop="4dp"
         android:text="TextView"

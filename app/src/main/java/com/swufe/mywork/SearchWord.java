@@ -67,4 +67,25 @@ public class SearchWord extends AppCompatActivity {
         Intent intent = new Intent(this,AddWord.class);
         startActivity(intent);
     }
+
+    public void to_page_rember(View v){
+        //转到记单词界面
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void to_page_wordlist(View v){
+        //转到展示全部单词界面
+        Intent intent = new Intent(this,MyWord.class);
+        startActivity(intent);
+    }
+    public void to_page_search(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,SearchWord.class);
+        startActivity(intent);
+    }
+    public void to_page_add(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,AddWord.class);
+        startActivity(intent);
+    }
 }

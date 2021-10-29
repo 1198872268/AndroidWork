@@ -1,5 +1,6 @@
 package com.swufe.mywork;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -59,6 +60,28 @@ public class SearchOnline extends AppCompatActivity implements Runnable{
                 new String[]{ word, content, know});
         Log.i(TAG, "onClick: "+"success");
         Toast.makeText(SearchOnline.this, "已添加到生词本~", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void to_page_rember(View v){
+        //转到记单词界面
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void to_page_wordlist(View v){
+        //转到展示全部单词界面
+        Intent intent = new Intent(this,MyWord.class);
+        startActivity(intent);
+    }
+    public void to_page_search(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,SearchWord.class);
+        startActivity(intent);
+    }
+    public void to_page_add(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,AddWord.class);
+        startActivity(intent);
     }
 
     //run方法获取网络服务，在网上爬取单词含义

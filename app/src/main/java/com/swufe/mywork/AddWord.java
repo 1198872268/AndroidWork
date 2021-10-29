@@ -1,5 +1,6 @@
 package com.swufe.mywork;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,4 +40,26 @@ public class AddWord extends AppCompatActivity {
         Log.i(TAG, "onClick: "+"success");
         Toast.makeText(AddWord.this, "插入完毕~", Toast.LENGTH_SHORT).show();
     }
+
+    public void to_page_rember(View v){
+        //转到记单词界面
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void to_page_wordlist(View v){
+        //转到展示全部单词界面
+        Intent intent = new Intent(this,MyWord.class);
+        startActivity(intent);
+    }
+    public void to_page_search(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,SearchWord.class);
+        startActivity(intent);
+    }
+    public void to_page_add(View v){
+        //转到搜索单词界面
+        Intent intent = new Intent(this,AddWord.class);
+        startActivity(intent);
+    }
+
 }
