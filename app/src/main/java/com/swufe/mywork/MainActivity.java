@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         HashMap<String, String> word = wordlist.get(i);
         String myword = word.get("word");
         show_word.setText(myword);
+        TextView show = findViewById(R.id.page_remeber);
+        show.setTextColor(this.getResources().getColor(R.color.blue));
     }
 
     public void know(View v){

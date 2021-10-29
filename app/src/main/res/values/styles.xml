@@ -12,8 +12,8 @@
     <style name="content">
         <item name="android:textColor">#090808</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:layout_height">100dp</item>
-        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_width">240dp</item>
     </style>
 
     <style name="lead">
@@ -24,14 +24,14 @@
         <item name="android:textColor">#393838</item>
         <item name="android:textSize">18sp</item>
         <item name="android:layout_height">60dp</item>
-        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_width">200dp</item>
     </style>
 
     <style name="input_content">
         <item name="android:textColor">#393838</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:layout_height">360dp</item>
-        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_width">240dp</item>
 
     </style>
 

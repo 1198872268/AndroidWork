@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        tools:layout_editor_absoluteX="198dp" />
+
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -52,5 +63,6 @@
             android:onClick="to_page_add"
             android:text="@string/addword" />
     </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

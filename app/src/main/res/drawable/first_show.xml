@@ -5,15 +5,15 @@
     <solid android:color="#00FDFCFC" />
 
     <!-- 设置一个黑色边框 -->
-    <stroke
-        android:width="2px"
-        android:color="#000000" />
+<!--    <stroke-->
+<!--        android:width="2px"-->
+<!--        android:color="#000000" />-->
     <!-- 设置四个圆角的半径 -->
     <corners
-        android:bottomLeftRadius="25px"
-        android:bottomRightRadius="25px"
-        android:topLeftRadius="25px"
-        android:topRightRadius="25px" />
+        android:bottomLeftRadius="20px"
+        android:bottomRightRadius="20px"
+        android:topLeftRadius="20px"
+        android:topRightRadius="20px" />
     <!-- 设置一下边距,让空间大一点 -->
     <padding
         android:bottom="5dp"

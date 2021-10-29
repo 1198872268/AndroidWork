@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,13 +18,17 @@ public class AddWord extends AppCompatActivity {
     MyDBHelper myDBHelper;
     SQLiteDatabase db;
     String TAG = "Addword" ;
+    TextView show;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_word);
-
+        show = findViewById(R.id.page_add);
+        show.setTextColor(this.getResources().getColor(R.color.blue));
     }
+
+
     public void add_word(View btn){
         add_word = findViewById(R.id.add_word);
         add_content = findViewById(R.id.add_content);

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +38,9 @@ public class MyWord extends AppCompatActivity implements AdapterView.OnItemClick
         listView.setAdapter(myadapter);
         listView.setOnItemLongClickListener(MyWord.this);
         listView.setOnItemClickListener(MyWord.this);
+
+        TextView show = findViewById(R.id.page_wordlist);
+        show.setTextColor(this.getResources().getColor(R.color.blue));
     }
 
 

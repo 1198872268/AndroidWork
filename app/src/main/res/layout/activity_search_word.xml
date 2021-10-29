@@ -10,11 +10,10 @@
         android:id="@+id/search_input_word"
 
         style="@style/input_word"
-        android:layout_marginTop="172dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
         android:gravity="center"
         android:text="@string/search_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,51 +30,59 @@
 
     <TextView
         android:id="@+id/search_show_content"
-        android:layout_width="341dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="160dp"
+        style="@style/content"
+        android:layout_marginBottom="100dp"
         android:gravity="center"
         android:text="@string/blank"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_input_word" />
+        app:layout_constraintBottom_toTopOf="@+id/local_to_add"
+        app:layout_constraintEnd_toEndOf="@+id/local_to_searchonline"
+        app:layout_constraintStart_toStartOf="@+id/local_to_add" />
 
     <Button
         android:id="@+id/local_to_add"
         android:layout_width="119dp"
         android:layout_height="63dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="page_to_addword"
         android:text="自己添加"
         android:visibility="gone"
-        android:onClick="page_to_addword"
+        app:layout_constraintBottom_toTopOf="@+id/search_line"
         app:layout_constraintEnd_toStartOf="@+id/local_to_searchonline"
-        app:layout_constraintHorizontal_bias="0.595"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_show_content" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/local_to_searchonline"
         android:layout_width="114dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="page_to_searchonline"
+
         android:text="在线搜索"
         android:visibility="gone"
-        android:onClick="page_to_searchonline"
-        app:layout_constraintBottom_toBottomOf="@+id/local_to_add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/local_to_add"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toTopOf="@+id/search_line"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
+        android:id="@+id/search_line"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="75dp"
         android:layout_gravity="bottom"
 
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:text="TextView"
+
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            tools:layout_editor_absoluteX="198dp" />
 
         <include layout="@layout/lead"></include>
     </LinearLayout>

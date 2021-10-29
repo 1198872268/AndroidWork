@@ -25,6 +25,9 @@ public class SearchWord extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_word);
+
+        TextView show = findViewById(R.id.page_search);
+        show.setTextColor(this.getResources().getColor(R.color.blue));
     }
 
     public void search(View v){
@@ -53,17 +56,12 @@ public class SearchWord extends AppCompatActivity {
 
     //如果点击在线搜索，则跳转至在线搜索页面
     public void page_to_searchonline(View v){
-        local_to_searchonline = findViewById(R.id.local_to_searchonline);
         Intent intent = new Intent(this,SearchOnline.class);
-//        search_input_word = findViewById(R.id.search_input_word);
-//        String input_word = search_input_word.getText().toString();
-//        intent.putExtra("searchonline_word",input_word);
         startActivity(intent);
     }
 
     //如果点击自行添加，则跳转至添加单词
     public void page_to_addword(View v){
-        local_to_searchonline = findViewById(R.id.local_to_searchonline);
         Intent intent = new Intent(this,AddWord.class);
         startActivity(intent);
     }

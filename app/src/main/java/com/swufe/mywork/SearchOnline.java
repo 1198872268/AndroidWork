@@ -31,7 +31,8 @@ public class SearchOnline extends AppCompatActivity implements Runnable{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_online);
-
+//        TextView show = findViewById(R.id.page_search);
+//        show.setTextColor(this.getResources().getColor(R.color.blue));
 //        Log.i(TAG, "onCreate: "+xx);
 
 
