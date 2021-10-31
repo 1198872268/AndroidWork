@@ -13,7 +13,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="150dp"
         android:gravity="center"
-        android:text="@string/search_content"
+        android:hint="@string/search_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,12 +31,13 @@
     <TextView
         android:id="@+id/search_show_content"
         style="@style/content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="160dp"
         android:gravity="center"
         android:text="@string/blank"
-        app:layout_constraintBottom_toTopOf="@+id/local_to_add"
-        app:layout_constraintEnd_toEndOf="@+id/local_to_searchonline"
-        app:layout_constraintStart_toStartOf="@+id/local_to_add" />
+        app:layout_constraintBottom_toTopOf="@+id/search_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/local_to_add"

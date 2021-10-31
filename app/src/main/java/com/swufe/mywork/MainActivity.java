@@ -93,12 +93,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void to_page_rember(View v){
         //转到记单词界面
+
         TextView tv = findViewById(R.id.page_remeber);
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
     public void to_page_wordlist(View v){
         //转到展示全部单词界面
+//        finish();
         Intent intent = new Intent(this,MyWord.class);
         startActivity(intent);
     }

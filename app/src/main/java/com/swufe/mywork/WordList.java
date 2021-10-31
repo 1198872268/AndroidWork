@@ -20,6 +20,12 @@ public class WordList {
         retlist = new ArrayList<HashMap<String,String>>();
         Cursor cursor = db.rawQuery("SELECT * FROM word WHERE know = ?",
                 new String[]{"1"});
+        if(cursor.getCount()==0){
+            HashMap<String,String> add = new HashMap<String,String>();
+            add.put("word","null");
+            add.put("content","您还没有单词，快去添加吧");
+            retlist.add(add);
+        }
         while (cursor.moveToNext()) {
             String word = cursor.getString(0);
             String content =cursor.getString(1);
